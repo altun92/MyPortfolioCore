@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyPortfolioCore.DAL.Context;
 
-namespace MyPortfolioCore.ViewComponents
+namespace MyPortfolioCore.Controllers
 {
-    public class _SkillComponentPartial : ViewComponent
+    public class ExperienceController : Controller
     {
         MyPortfolioContext context = new MyPortfolioContext();
-        public IViewComponentResult Invoke()
+        public IActionResult ExperienceList()
         {
-            var values = context.Skills.ToList();
+            var values = context.Experiences.ToList();
             return View(values);
         }
     }
