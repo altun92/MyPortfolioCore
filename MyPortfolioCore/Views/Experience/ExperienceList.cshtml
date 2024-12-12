@@ -39,15 +39,14 @@
 											<td>@item.Date</td>
 											<td>@item.Description</td>
 											<td>
-												<a href="" class="btn btn-success">Güncelle</a>
-												<a href="" class="btn btn-warning">Sil</a>
+												<a href="/Experience/UpdateExperience/@item.ExperienceId" class="btn btn-success">Güncelle</a>
+												<a href="/Experience/DeleteExperience/@item.ExperienceId" class="btn btn-warning">Sil</a>
 											</td>
 										</tr>
 									</tbody>
 								}
 							</table>
-							<br />
-							<a href="" class="btn btn-primary btn-round">Yeni Deneyim Ekle</a>
+							<a href="/Experience/CreateExperience" class="btn btn-primary btn-round">Yeni Deneyim Ekle</a>
 						</div>
 					</div>
 				</div>
