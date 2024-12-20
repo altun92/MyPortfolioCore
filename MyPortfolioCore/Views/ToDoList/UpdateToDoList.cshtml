@@ -1,0 +1,36 @@
+﻿@model MyPortfolioCore.DAL.Entities.ToDoList
+@{
+    ViewData["Title"] = "UpdateToDoList";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="main-panel">
+	<div class="content">
+		<div class="container-fluid">
+			<h4 class="page-title">Yapılacaklar</h4>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Yapılacak İş Güncelleme</div>
+						</div>
+						<div class="card-body">
+							<form method="post">
+								@Html.HiddenFor(x => x.ToDoListId)
+								<label>Firma Bilgisi</label>
+								@Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+								<br />
+
+								<label>Çalışılan Pozisyon</label>
+								@Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+								<br />
+								<button class="btn btn-primary">Güncelle</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
